@@ -7,13 +7,30 @@
     <style>
         /* 设置全局背景和字体 */
         body {
-            font-family: Arial, sans-serif;
-            background: #ffe4e1; /* 淡粉色背景 */
+            font-family: 'Arial', sans-serif;
+            background: #fff0f5; /* 淡粉色背景 */
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
-        /* 顶部返回按钮 */
+        /* 顶部导航条和Logo */
+        header {
+            background: #ffcc99; /* 温暖的黄色背景 */
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff6347; /* 番茄红色 */
+            letter-spacing: 2px;
+        }
+
+        /* 返回按钮样式 */
         .back-button {
             position: fixed;
             top: 20px;
@@ -33,7 +50,18 @@
             background: #ff1493; /* 深粉色背景 */
         }
 
-        /* 内容区域 */
+        /* 页面标题 */
+        h1 {
+            text-align: center;
+            color: #ff6347; /* 番茄红色标题 */
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 增加阴影 */
+        }
+
+        /* 内容容器 */
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -43,24 +71,26 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        h1 {
-            text-align: center;
-            color: #ff69b4; /* 热粉色标题 */
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
+        /* 每个部分的布局 */
         .section {
             display: flex;
             justify-content: space-between;
             margin-bottom: 40px;
             align-items: center;
+            transition: transform 0.3s ease-in-out;
         }
 
+        /* 图片样式 */
         .section img {
             width: 40%;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* 悬浮效果 */
+        .section img:hover {
+            transform: scale(1.05); /* 放大效果 */
         }
 
         .section div {
@@ -69,14 +99,33 @@
 
         .section h2 {
             font-size: 24px;
-            color: #ff69b4; /* 热粉色子标题 */
+            color: #ff6347; /* 番茄红色 */
             margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 标题阴影 */
+            transition: color 0.3s ease;
+        }
+
+        .section h2:hover {
+            color: #ff1493; /* 悬浮时改变为深粉色 */
         }
 
         .section p {
             font-size: 18px;
-            color: #333;
+            color: #666;
             line-height: 1.6;
+        }
+
+        /* 链接的样式 */
+        .section a {
+            text-decoration: none;
+            color: #ff6347; /* 番茄红色 */
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .section a:hover {
+            color: #ff1493; /* 悬浮时改为深粉色 */
         }
 
         /* 响应式布局 */
@@ -98,12 +147,17 @@
     </style>
 </head>
 <body>
+    <!-- 顶部导航 -->
+    <header>
+        <div class="logo">阅读支持</div>
+    </header>
+
     <!-- 返回按钮 -->
     <button class="back-button" onclick="window.location.href='index.html'">返回选择身份</button>
 
     <!-- 页面内容 -->
     <div class="container">
-        <h1>家长平台 - 阅读困难</h1>
+        <h1>Hello! 阅读困难</h1>
 
         <!-- 第一个部分：什么是阅读困难 -->
         <div class="section">
@@ -111,6 +165,7 @@
             <div>
                 <h2>什么是阅读困难？</h2>
                 <p>阅读困难是指一些儿童在阅读过程中遇到显著的困难，尽管他们的智力水平在正常范围内。了解阅读困难的早期信号对家长非常重要。</p>
+                <a href="reading-difficulty.html">了解更多</a>
             </div>
         </div>
 
@@ -120,6 +175,7 @@
             <div>
                 <h2>我的孩子是阅读困难吗？</h2>
                 <p>我们提供一些常见的识别方法和评估工具，帮助家长判断孩子是否可能有阅读困难的症状。</p>
+                <a href="child-reading-difficulty.html">了解更多</a>
             </div>
         </div>
 
@@ -129,6 +185,7 @@
             <div>
                 <h2>如何进行家庭治疗？</h2>
                 <p>我们将为家长提供一些有效的家庭干预方法，帮助孩子在日常生活中逐步提高阅读能力。</p>
+                <a href="home-therapy.html">了解更多</a>
             </div>
         </div>
 
@@ -138,6 +195,7 @@
             <div>
                 <h2>了解最新科学进展</h2>
                 <p>阅读困难的研究正在不断进展，我们将为家长提供最新的科学研究成果，帮助家长更好地理解孩子的需求。</p>
+                <a href="science-progress.html">了解更多</a>
             </div>
         </div>
     </div>
