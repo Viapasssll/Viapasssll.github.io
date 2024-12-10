@@ -3,16 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>家长主页 - 阅读支持</title>
-    <link rel="stylesheet" href="style.css">
+    <title>家长平台 - 阅读支持</title>
+    <style>
+        /* 设置全局背景和字体 */
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffe4e1; /* 淡粉色背景 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 顶部返回按钮 */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #ff69b4; /* 热粉色背景 */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ff1493; /* 深粉色背景 */
+        }
+
+        /* 内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff69b4; /* 热粉色标题 */
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .section img {
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section div {
+            width: 55%;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #ff69b4; /* 热粉色子标题 */
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section img {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .section div {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>家长主页</h1>
-    </header>
-    <main>
-        <p>欢迎，家长！这里是为您提供的阅读支持资源。</p>
-        <!-- 添加更多内容 -->
-    </main>
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="window.location.href='index.html'">返回选择身份</button>
+
+    <!-- 页面内容 -->
+    <div class="container">
+        <h1>家长平台 - 阅读困难</h1>
+
+        <!-- 第一个部分：什么是阅读困难 -->
+        <div class="section">
+            <img src="images/reading-difficulty.jpg" alt="阅读困难图片">
+            <div>
+                <h2>什么是阅读困难？</h2>
+                <p>阅读困难是指一些儿童在阅读过程中遇到显著的困难，尽管他们的智力水平在正常范围内。了解阅读困难的早期信号对家长非常重要。</p>
+            </div>
+        </div>
+
+        <!-- 第二个部分：我的孩子是阅读困难吗？ -->
+        <div class="section">
+            <img src="images/child-reading-difficulty.jpg" alt="孩子阅读困难">
+            <div>
+                <h2>我的孩子是阅读困难吗？</h2>
+                <p>我们提供一些常见的识别方法和评估工具，帮助家长判断孩子是否可能有阅读困难的症状。</p>
+            </div>
+        </div>
+
+        <!-- 第三个部分：如何进行家庭治疗 -->
+        <div class="section">
+            <img src="images/home-therapy.jpg" alt="家庭治疗图片">
+            <div>
+                <h2>如何进行家庭治疗？</h2>
+                <p>我们将为家长提供一些有效的家庭干预方法，帮助孩子在日常生活中逐步提高阅读能力。</p>
+            </div>
+        </div>
+
+        <!-- 第四个部分：了解最新科学进展 -->
+        <div class="section">
+            <img src="images/science-progress.jpg" alt="科学进展图片">
+            <div>
+                <h2>了解最新科学进展</h2>
+                <p>阅读困难的研究正在不断进展，我们将为家长提供最新的科学研究成果，帮助家长更好地理解孩子的需求。</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
