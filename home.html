@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页 - 阅读支持</title>
+    <script>
+        window.onload = function () {
+            const role = sessionStorage.getItem('role');
+            const content = document.getElementById('content');
+            if (role === 'parent') {
+                content.innerHTML = '<h2>欢迎，家长！</h2><p>这里是为您提供的资源。</p>';
+            } else if (role === 'reader') {
+                content.innerHTML = '<h2>欢迎，阅读困难者！</h2><p>这里是支持您的内容。</p>';
+            } else if (role === 'researcher') {
+                content.innerHTML = '<h2>欢迎，研究者！</h2><p>这里是研究相关资源。</p>';
+            } else if (role === 'teacher') {
+                content.innerHTML = '<h2>欢迎，老师！</h2><p>这里是教育支持内容。</p>';
+            } else {
+                content.innerHTML = '<h2>请先选择您的身份。</h2>';
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>
