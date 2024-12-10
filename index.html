@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>选择身份 - 阅读支持</title>
     <style>
-        /* 欢迎页面样式 */
+        /* 全局样式 */
         body {
             display: flex;
             justify-content: center;
@@ -13,35 +13,56 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f0f8ff;
+            background: #ffe4e1; /* 淡粉色背景 */
         }
+
+        /* 容器样式 */
         .container {
             text-align: center;
-            background: #ffffff;
+            background: #ffb6c1; /* 深粉红色背景 */
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
         }
+
+        .container:hover {
+            transform: scale(1.05); /* 鼠标悬停时放大 */
+        }
+
+        /* 标题样式 */
         h1 {
-            color: #333;
+            color: #ffffff;
+            font-size: 24px;
             margin-bottom: 20px;
         }
+
+        /* 按钮区域样式 */
         .buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
+
+        /* 按钮样式 */
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 15px;
+            font-size: 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background 0.3s;
+            background: #fff;
+            color: #ff69b4; /* 热粉色字体 */
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
+
         button:hover {
-            background: #0078d7;
+            background: #ff69b4; /* 热粉色背景 */
             color: #fff;
+            transform: translateY(-5px); /* 鼠标悬停时上浮 */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -49,10 +70,10 @@
     <div class="container">
         <h1>我的身份是</h1>
         <div class="buttons">
-            <button onclick="navigate('parent')">家长Parents</button>
+            <button onclick="navigate('parent')">家长Parent</button>
             <button onclick="navigate('reader')">阅读困难者Dyslexic</button>
             <button onclick="navigate('researcher')">学校School</button>
-            <button onclick="navigate('teacher')">研究者Researcheracde</button>
+            <button onclick="navigate('teacher')">研究者Researcher</button>
         </div>
     </div>
     <script>
@@ -63,5 +84,6 @@
     </script>
 </body>
 </html>
+
 
 
