@@ -40,5 +40,42 @@
       <p>在家提供有爱有耐心的环境，配合专业建议开展针对性的阅读训练。</p>
     </article>
   </section>
+
+  <!-- 详细“我需要担心吗”内容和互动清单 -->
+  <section id="worry-section" class="container" style="max-width:900px; margin: 0 auto 60px; padding: 20px;">
+    <h2>我需要担心吗？</h2>
+
+    <div class="intro-text" style="font-size:18px; color:#5a2e2f; margin-bottom:15px;">
+      阅读障碍是一种常见的学习困难，主要表现为孩子在阅读过程中遇到的多种问题。主要特征包括：
+    </div>
+
+    <form class="checklist" id="checklist-form" aria-label="阅读障碍风险清单" style="display:flex; flex-direction: column; gap: 10px; font-size:18px; color:#5a2e2f;">
+      <label><input type="checkbox" name="symptom" value="mirror" /> 写字时会出现镜像字或正反字（例如把“6”写成“9”，把“问”写成“闻”）</label>
+      <label><input type="checkbox" name="symptom" value="skip" /> 阅读时经常跳过某些字或漏读</label>
+      <label><input type="checkbox" name="symptom" value="no-read" /> 只喜欢听故事，不愿意自己阅读</label>
+      <label><input type="checkbox" name="symptom" value="low-grade" /> 语文成绩在班级中偏低，跟不上同学</label>
+      <label><input type="checkbox" name="symptom" value="slow-read" /> 读书时需要很长时间，理解困难</label>
+      <label><input type="checkbox" name="symptom" value="spelling-errors" /> 拼写错误较多，容易混淆相似字</label>
+      <label><input type="checkbox" name="symptom" value="frustration" /> 阅读时表现出明显的挫败感或不耐烦</label>
+    </form>
+
+    <div class="risk-warning" id="risk-warning" role="alert" aria-live="polite" style="display:none; margin-top:20px; font-size: 18px; color: #d44a50; font-weight: 700;">
+      您的孩子可能存在阅读困难的风险。建议尽早咨询专业机构，进行进一步评估和帮助。
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('checklist-form');
+    const warning = document.getElementById('risk-warning');
+
+    form.addEventListener('change', () => {
+      const checkedCount = form.querySelectorAll('input[type="checkbox"]:checked').length;
+      if (checkedCount >= 3) {
+        warning.style.display = 'block';
+      } else {
+        warning.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
