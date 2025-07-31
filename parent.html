@@ -5,96 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>家长页面</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
+<style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #fdf6f7;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #fdf8f9;
       color: #333;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
+      padding-top: 70px;
     }
-
     .navbar {
-      background-color: #fde7e9;
-      padding: 15px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 1000;
-    }
-    .nav-list {
+      width: 100%;
+      background-color: #fde7e9;
       display: flex;
       justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .navbar ul {
+      display: flex;
       list-style: none;
-      margin: 0;
       padding: 0;
     }
-    .nav-item {
+    .navbar li {
       margin: 0 20px;
     }
-    .nav-item a {
+    .navbar a {
+      display: inline-block;
+      padding: 20px 0;
       text-decoration: none;
-      color: #a94448;
+      color: #333;
       font-weight: 500;
-      font-size: 18px;
-      padding: 5px;
       border-bottom: 2px solid transparent;
       transition: border-color 0.3s;
     }
-    .nav-item.active a,
-    .nav-item a:hover {
+    .navbar a:hover,
+    .navbar .active a {
+      color: #d44a50;
       border-bottom: 2px solid #d44a50;
     }
-
-    .section {
-      max-width: 900px;
+    section {
+      max-width: 800px;
       margin: 60px auto;
       padding: 0 20px;
     }
-    .section h2 {
+    h2 {
       font-size: 28px;
-      color: #a94448;
-      margin-bottom: 20px;
+      color: #a64448;
+      margin-bottom: 15px;
+      border-left: 4px solid #f6a6a9;
+      padding-left: 10px;
     }
-    .section p {
+    p {
       font-size: 16px;
-      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #555;
     }
-
-    .checklist {
+    ul.checklist {
+      margin-top: 15px;
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
-    .checklist li {
-      margin-bottom: 12px;
-      font-size: 16px;
+    ul.checklist li {
+      margin-bottom: 10px;
     }
-    .warning-message {
-      margin-top: 20px;
-      background-color: #ffe4e6;
-      padding: 12px;
+    .warning {
+      display: none;
+      background-color: #fff0f0;
       border-left: 4px solid #d44a50;
+      padding: 10px 15px;
+      margin-top: 20px;
+      border-radius: 6px;
+      color: #a33a3f;
       font-weight: 600;
     }
-
     .resource-item {
       background-color: #fff6f7;
       border-left: 4px solid #f6a6a9;
       padding: 12px 15px;
       margin-bottom: 12px;
-      border-radius: 8px;
-    }
-
-    .book-tags {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .book-tag {
-      background-color: #fff0f0;
-      border-left: 4px solid #f48c8c;
-      padding: 12px;
       border-radius: 8px;
     }
   </style>
@@ -149,11 +139,11 @@
   <section class="section">
     <h2>我可以怎么做？</h2>
     <div class="resource-item">
-      <strong>1. 去医院挂门诊</strong><br>
+      <strong>1. 医院门诊：基础筛查</strong><br>
       目前北京、上海等地多家三甲医院已开设“阅读困难门诊”，主要用于筛查 ADHD、智力、阅读能力等。有与阅读困难成因的复杂性，医院提供的干预通常为药物治疗。如果您的孩子被诊断为 ADHD 导致的阅读问题，可考虑在医生指导下使用药物。但如果并非如此，请勿轻易服药。
     </div>
     <div class="resource-item">
-      <strong>2. 阅读相关书籍，营造支持氛围</strong>
+      <strong>2. 阅读书籍：营造支持氛围</strong>
       <div class="book-tags">
         <div class="book-tag">
           <strong>《我不是笨小孩》</strong><br>
