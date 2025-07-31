@@ -159,57 +159,47 @@
     </style>
 </head>
 <body>
-    <!-- 顶部导航 -->
-    <header>
-        <div class="logo">阅读支持</div>
-    </header>
+  <!-- 导航栏 -->
+  <header class="nav">
+    <div class="logo">阅读小站</div>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="about.html">关于</a>
+      <a href="contact.html">联系我们</a>
+    </nav>
+  </header>
 
-    <!-- 返回按钮 -->
-    <button class="back-button" onclick="window.location.href='index.html'">返回选择身份</button>
-
-    <!-- 页面内容 -->
-    <div class="container">
-        <h1>Hello! 阅读困难</h1>
-
-        <!-- 第一个部分：什么是阅读困难 -->
-        <div class="section">
-            <img src="images/reading-difficulty.jpg" alt="阅读困难背景">
-            <div class="content">
-                <h2>什么是阅读困难？</h2>
-                <p>阅读困难是指一些儿童在阅读过程中遇到显著的困难，尽管他们的智力水平在正常范围内。了解阅读困难的早期信号对家长非常重要。</p>
-                <a href="reading-difficulty.html">了解更多</a>
-            </div>
-        </div>
-
-        <!-- 第二个部分：我的孩子是阅读困难吗？ -->
-        <div class="section">
-            <img src="images/child-reading-difficulty.jpg" alt="孩子阅读困难背景">
-            <div class="content">
-                <h2>我的孩子是阅读困难吗？</h2>
-                <p>我们提供一些常见的识别方法和评估工具，帮助家长判断孩子是否可能有阅读困难的症状。</p>
-                <a href="child-reading-difficulty.html">了解更多</a>
-            </div>
-        </div>
-
-        <!-- 第三个部分：如何进行家庭治疗 -->
-        <div class="section">
-            <img src="images/home-therapy.jpg" alt="家庭治疗背景">
-            <div class="content">
-                <h2>如何进行家庭治疗？</h2>
-                <p>我们将为家长提供一些有效的家庭干预方法，帮助孩子在日常生活中逐步提高阅读能力。</p>
-                <a href="home-therapy.html">了解更多</a>
-            </div>
-        </div>
-
-        <!-- 第四个部分：了解最新科学进展 -->
-        <div class="section">
-            <img src="images/science-progress.jpg" alt="科学进展背景">
-            <div class="content">
-                <h2>了解最新科学进展</h2>
-                <p>阅读困难的研究正在不断进展，我们将为家长提供最新的科学研究成果，帮助家长更好地理解孩子的需求。</p>
-                <a href="science-progress.html">了解更多</a>
-            </div>
-        </div>
+  <!-- 主视觉 -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>让每个孩子<br>都能轻松阅读</h1>
+      <p>我们致力于支持家长识别和理解孩子的阅读困难。</p>
+      <a href="#support" class="btn-primary">获取支持</a>
     </div>
+    <div class="hero-img">
+      <img src="images/parent-visual.jpg" alt="家长与孩子">
+    </div>
+  </section>
+
+  <!-- 支持模块 -->
+  <section class="support-section" id="support">
+    <div class="support-title">家长支持指南</div>
+
+    <div class="support-block">
+      <div class="support-number">01</div>
+      <div class="support-content">
+        <h2>我该怎么办？</h2>
+        <p>当孩子在朗读或拼写方面遇到困难时，家长可以通过观察、筛查和咨询专家来进行早期识别。</p>
+      </div>
+    </div>
+
+    <div class="support-block">
+      <div class="support-number">02</div>
+      <div class="support-content">
+        <h2>我可以联系谁？</h2>
+        <p>您可以联系学校老师、心理咨询师、或阅读障碍支持组织来获取专业建议。</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
