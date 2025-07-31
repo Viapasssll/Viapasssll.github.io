@@ -27,54 +27,73 @@
 
   <!-- 核心问题卡片区 -->
   <section class="core-questions">
+    <!-- 第一张卡片 -->
     <article class="question-card">
       <h2>我应该担心吗？</h2>
       <p>阅读困难可能影响孩子的学习和自信，但及时关注和帮助能带来积极改变。</p>
+
+      <!-- 嵌入互动清单 -->
+      <div class="checklist-section">
+        <ul class="checklist">
+          <li><label><input type="checkbox" class="check-item" /> 镜像字或写反（如“6”写成“9”，“问”写成“闻”）</label></li>
+          <li><label><input type="checkbox" class="check-item" /> 阅读时跳读或漏读</label></li>
+          <li><label><input type="checkbox" class="check-item" /> 只喜欢听故事，不主动阅读</label></li>
+          <li><label><input type="checkbox" class="check-item" /> 语文成绩落后同龄人</label></li>
+          <li><label><input type="checkbox" class="check-item" /> 读书速度慢，理解困难</label></li>
+          <li><label><input type="checkbox" class="check-item" /> 拼写错误多，易混淆相似字</label></li>
+          <li><label><input type="checkbox" class="check-item" /> 阅读时挫败感明显</label></li>
+        </ul>
+        <p id="warning-message" class="warning-message" style="display: none;">
+          您的孩子可能存在阅读困难的风险，建议进一步关注或寻求专业支持。
+        </p>
+      </div>
     </article>
+
+    <!-- 第二张卡片：联系谁 -->
     <article class="question-card">
       <h2>我应该联系谁？</h2>
-      <p>可以联系学校老师、专业诊断机构或阅读障碍支持团体，获得专业指导和支持。</p>
+      <p>当你意识到孩子可能面临阅读困难时，以下资源可能对你有帮助。</p>
+
+      <div class="resource-list">
+        <div class="resource-item">
+          <strong>【飞米力】</strong><br />
+          分享阅读困难儿童及其家庭的经历和经验。可加入家长微信群，获得交流与支持。
+        </div>
+        <div class="resource-item">
+          <strong>【读写困难有方法】</strong><br />
+          香港教育大学徐堃博士主理，提供专业英语干预服务，适用于第二语言学习者。
+        </div>
+        <div class="resource-item">
+          <strong>【KnockKnock 芝麻开门】</strong><br />
+          北京大学孟祥芝教授公众号，介绍阅读相关研究与课题招募信息。
+        </div>
+        <div class="resource-item">
+          <strong>【虹阅读实验室】</strong><br />
+          北京师范大学李虹教授课题组，发布阅读困难相关科普和研究项目。
+        </div>
+        <p style="margin-top: 20px; color: #d44a50; font-weight: bold;">
+          ⚠️ 目前中国大陆尚未建立成熟的阅读障碍专业干预机构，请家长注意甄别信息来源的专业性。
+        </p>
+      </div>
     </article>
+
+    <!-- 第三张卡片 -->
     <article class="question-card">
       <h2>我可以怎么做？</h2>
       <p>在家提供有爱有耐心的环境，配合专业建议开展针对性的阅读训练。</p>
     </article>
   </section>
 
-  <!-- 详细“我需要担心吗”内容和互动清单 -->
-  <section id="worry-section" class="container" style="max-width:900px; margin: 0 auto 60px; padding: 20px;">
-    <h2>我需要担心吗？</h2>
-
-    <div class="intro-text" style="font-size:18px; color:#5a2e2f; margin-bottom:15px;">
-      阅读障碍是一种常见的学习困难，主要表现为孩子在阅读过程中遇到的多种问题。主要特征包括：
-    </div>
-
-    <form class="checklist" id="checklist-form" aria-label="阅读障碍风险清单" style="display:flex; flex-direction: column; gap: 10px; font-size:18px; color:#5a2e2f;">
-      <label><input type="checkbox" name="symptom" value="mirror" /> 写字时会出现镜像字或正反字（例如把“6”写成“9”，把“问”写成“闻”）</label>
-      <label><input type="checkbox" name="symptom" value="skip" /> 阅读时经常跳过某些字或漏读</label>
-      <label><input type="checkbox" name="symptom" value="no-read" /> 只喜欢听故事，不愿意自己阅读</label>
-      <label><input type="checkbox" name="symptom" value="low-grade" /> 语文成绩在班级中偏低，跟不上同学</label>
-      <label><input type="checkbox" name="symptom" value="slow-read" /> 读书时需要很长时间，理解困难</label>
-      <label><input type="checkbox" name="symptom" value="spelling-errors" /> 拼写错误较多，容易混淆相似字</label>
-      <label><input type="checkbox" name="symptom" value="frustration" /> 阅读时表现出明显的挫败感或不耐烦</label>
-    </form>
-
-    <div class="risk-warning" id="risk-warning" role="alert" aria-live="polite" style="display:none; margin-top:20px; font-size: 18px; color: #d44a50; font-weight: 700;">
-      您的孩子可能存在阅读困难的风险。建议尽早咨询专业机构，进行进一步评估和帮助。
-    </div>
-  </section>
-
+  <!-- JavaScript 功能 -->
   <script>
-    const form = document.getElementById('checklist-form');
-    const warning = document.getElementById('risk-warning');
+    const checkboxes = document.querySelectorAll('.check-item');
+    const warningMessage = document.getElementById('warning-message');
 
-    form.addEventListener('change', () => {
-      const checkedCount = form.querySelectorAll('input[type="checkbox"]:checked').length;
-      if (checkedCount >= 3) {
-        warning.style.display = 'block';
-      } else {
-        warning.style.display = 'none';
-      }
+    checkboxes.forEach(box => {
+      box.addEventListener('change', () => {
+        const checkedCount = [...checkboxes].filter(cb => cb.checked).length;
+        warningMessage.style.display = checkedCount >= 3 ? 'block' : 'none';
+      });
     });
   </script>
 </body>
