@@ -150,3 +150,116 @@ h1 {
         width: 90%;
     }
 }
+
+
+/* Reset & 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f9f5f4; /* 柔和米灰色背景 */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 60px; /* 留出导航栏固定高度 */
+}
+
+/* 顶部导航栏 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fde7e9; /* 淡粉色背景 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  padding: 20px 0;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.nav-item:hover a {
+  border-bottom: 3px solid #f6a6a9; /* 浅粉hover色 */
+}
+
+.nav-item.active a {
+  font-weight: 700;
+  border-bottom: 3px solid #d44a50; /* 当前页红粉色下划线 */
+  color: #d44a50;
+}
+
+/* 欢迎语 Hero Section */
+.hero-section {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 40px 20px;
+  background-color: #fde7e9; /* 浅粉色背景块 */
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #5a2e2f;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(237, 203, 203, 0.3);
+}
+
+/* 核心问题区域 */
+.core-questions {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 每个问题卡片 */
+.question-card {
+  background-color: #fbe8ea; /* 柔和粉色卡片 */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(219, 178, 180, 0.3);
+  padding: 30px 25px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.question-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(219, 178, 180, 0.5);
+}
+
+.question-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #a64448;
+}
+
+.question-card p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #5a2e2f;
+}
