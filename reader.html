@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阅读困难读者专区</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    section {
+      background: #ffe4e1;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #c71585;
+    }
+
+    .speak-button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .speak-button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>欢迎来到阅读困难读者专区</h1>
+  </header>
+
+  <div class="container">
+    
+    <section>
+      <h2>我遇到了什么问题？</h2>
+      <p id="text1">
+        有时候你会发现，阅读课本或文章比其他人要慢、要困难。你可能会跳过字、不认识词，或者读完了也不太记得内容。这是阅读困难的一种表现，不是你的错！
+      </p>
+      <button class="speak-button" onclick="speakText('text1')">🔊 朗读</button>
+    </section>
+
+    <section>
+      <h2>我应该联系谁？</h2>
+      <p id="text2">
+        你可以告诉你的爸爸妈妈、老师或者学校的心理辅导老师。他们会认真听你说，帮助你找到最合适的学习方法，不要一个人着急。
+      </p>
+      <button class="speak-button" onclick="speakText('text2')">🔊 朗读</button>
+    </section>
+
+    <section>
+      <h2>我该怎么办？</h2>
+      <p id="text3">
+        不用担心！你可以通过每天练习、使用专门的软件或图书、参加学校支持项目来慢慢提升阅读能力。保持信心，慢慢来，你一定能进步！
+      </p>
+      <button class="speak-button" onclick="speakText('text3')">🔊 朗读</button>
+    </section>
+
+  </div>
+
+  <script>
+    function speakText(id) {
+      const text = document.getElementById(id).textContent;
+      const msg = new SpeechSynthesisUtterance(text);
+      msg.lang = 'zh-CN';
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+
+</body>
+</html>
