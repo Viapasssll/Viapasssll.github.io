@@ -2,172 +2,213 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>家长页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>家长支持页面</title>
   <link rel="stylesheet" href="style.css" />
-<style>
+  <style>
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #fdf8f9;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
-      padding-top: 70px;
+      padding: 0;
+      background-color: #fdf6f7;
+      color: #333;
     }
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       background-color: #fde7e9;
-      display: flex;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       z-index: 1000;
     }
-    .navbar ul {
+    .nav-list {
       display: flex;
+      justify-content: center;
       list-style: none;
-      padding: 0;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .navbar li {
+    .nav-item {
       margin: 0 20px;
+      font-size: 18px;
     }
-    .navbar a {
-      display: inline-block;
-      padding: 20px 0;
+    .nav-item a {
       text-decoration: none;
       color: #333;
-      font-weight: 500;
-      border-bottom: 2px solid transparent;
+      padding: 20px 0;
+      display: inline-block;
+      border-bottom: 3px solid transparent;
       transition: border-color 0.3s;
     }
-    .navbar a:hover,
-    .navbar .active a {
+    .nav-item:hover a {
+      border-bottom: 3px solid #f6a6a9;
+    }
+    .nav-item.active a {
+      font-weight: 700;
+      border-bottom: 3px solid #d44a50;
       color: #d44a50;
-      border-bottom: 2px solid #d44a50;
+    }
+    header {
+      padding-top: 80px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    header h1 {
+      font-size: 36px;
+      color: #b94c55;
     }
     section {
       max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
     }
-    h2 {
+    section h2 {
+      color: #b94c55;
       font-size: 28px;
-      color: #a64448;
-      margin-bottom: 15px;
-      border-left: 4px solid #f6a6a9;
-      padding-left: 10px;
+      margin-bottom: 20px;
     }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555;
-    }
-    ul.checklist {
-      margin-top: 15px;
+    .checklist li {
       list-style: none;
-      padding-left: 0;
+      margin-bottom: 12px;
     }
-    ul.checklist li {
-      margin-bottom: 10px;
+    .checklist input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.3);
     }
     .warning {
-      display: none;
-      background-color: #fff0f0;
-      border-left: 4px solid #d44a50;
-      padding: 10px 15px;
-      margin-top: 20px;
-      border-radius: 6px;
+      background-color: #ffe9ea;
       color: #a33a3f;
-      font-weight: 600;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-weight: bold;
     }
     .resource-item {
-      background-color: #fff6f7;
+      background: #fff7f7;
       border-left: 4px solid #f6a6a9;
-      padding: 12px 15px;
-      margin-bottom: 12px;
+      padding: 15px;
+      margin-bottom: 16px;
       border-radius: 8px;
     }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+    .book-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+.book-tag {
+  background-color: #fff0f2;
+  border-left: 4px solid #f6a6a9;
+  padding: 12px 16px;
+  border-radius: 10px;
+  line-height: 1.6;
+}
   </style>
 </head>
 <body>
+  <!-- 顶部导航栏 -->
   <nav class="navbar">
     <ul class="nav-list">
-      <li class="nav-item active"><a href="#">家长</a></li>
+      <li class="nav-item active"><a href="parent.html">家长</a></li>
       <li class="nav-item"><a href="school.html">学校</a></li>
       <li class="nav-item"><a href="researcher.html">研究者</a></li>
       <li class="nav-item"><a href="readers.html">阅读困难者</a></li>
     </ul>
   </nav>
 
-  <section class="section">
-    <h2>我需要担心吗？</h2>
-    <p>阅读困难可能影响孩子的学习和自信，但及时关注和帮助能带来积极改变。</p>
+  <header>
+    <h1>我们理解你的担忧</h1>
+    <p>孩子阅读困难？你不是一个人。</p>
+  </header>
 
-    <ul class="checklist">
-      <li><input type="checkbox" class="check"> 写字时会出现镜像字或正反字（例如把“6”写成“9”，把“问”写成“闻”）</li>
-      <li><input type="checkbox" class="check"> 阅读时经常跳过某些字或漏读</li>
-      <li><input type="checkbox" class="check"> 只喜欢听故事，不愿意自己阅读</li>
-      <li><input type="checkbox" class="check"> 语文成绩在班级中偏低，跟不上同学</li>
-      <li><input type="checkbox" class="check"> 读书时需要很长时间，理解困难</li>
-      <li><input type="checkbox" class="check"> 拼写错误较多，容易混淆相似字</li>
-      <li><input type="checkbox" class="check"> 阅读时表现出明显的挫败感或不耐烦</li>
+  <section>
+    <h2>我需要担心吗？</h2>
+    <p>下面是一些常见的迹象，如果出现多项，建议进一步关注孩子的阅读发展：</p>
+    <ul class="checklist" id="symptomChecklist">
+      <li><label><input type="checkbox" /> 镜像字或写反（如“6”写成“9”，“问”写成“闻”）</label></li>
+      <li><label><input type="checkbox" /> 阅读时跳读或漏读</label></li>
+      <li><label><input type="checkbox" /> 只喜欢听故事，不主动阅读</label></li>
+      <li><label><input type="checkbox" /> 语文成绩落后同龄人</label></li>
+      <li><label><input type="checkbox" /> 读书速度慢，理解困难</label></li>
+      <li><label><input type="checkbox" /> 拼写错误多，易混淆相似字</label></li>
+      <li><label><input type="checkbox" /> 阅读时挫败感明显</label></li>
     </ul>
-    <div id="warning" class="warning-message" style="display:none;">您的孩子可能存在阅读困难的风险，建议进一步评估。</div>
+    <div class="warning" id="warningMessage" style="display:none;">您的孩子可能存在阅读困难的风险，建议进一步关注。</div>
   </section>
 
-  <section class="section">
+  <section>
     <h2>我应该联系谁？</h2>
     <div class="resource-item">
-      <strong>飞米力</strong><br>
-      分享阅读困难儿童和家庭的经历和经验，进入家长交流群，共同交流。
+      <strong>飞米力</strong><br />
+      分享阅读困难儿童和家庭的经历；可加入家长群共同讨论。
     </div>
     <div class="resource-item">
-      <strong>读写困难有方法</strong><br>
-      香港教育大学博士徐堃提供的专业英语阅读困难干预建议，定期组织线上讲座，面向家长及教师。
+      <strong>读写困难有方法</strong><br />
+      香港教育大学徐堃博士运营，提供英语阅读困难干预信息与服务。
     </div>
     <div class="resource-item">
-      <strong>KnockKnock 芝麻开门</strong><br>
-      北京大学孟祥芝教授团队发布的阅读能力研究、科普内容及参与招募信息。
+      <strong>KnockKnock 芝麻开门</strong><br />
+      北京大学孟祥芝教授的公众号，发布最新阅读研究资讯及课题招募。
     </div>
     <div class="resource-item">
-      <strong>虹阅读实验室</strong><br>
-      北京师范大学李虹教授课题组，分享阅读困难科普知识、研究动态及家长招募。
+      <strong>虹阅读实验室</strong><br />
+      北京师范大学李虹教授课题组，普及阅读困难知识并发布研究机会。
     </div>
-    <p><strong>提示：</strong>目前大陆暂无系统专业的阅读障碍干预机构，请家长注意辨别。</p>
+    <p style="margin-top: 20px; color: #c00; font-weight: bold;">目前大陆尚无官方专业阅读障碍干预机构，请家长务必注意辨别。</p>
   </section>
 
   <section class="section">
-    <h2>我可以怎么做？</h2>
-    <div class="resource-item">
-      <strong>1. 医院门诊：基础筛查</strong><br>
-      目前北京、上海等地多家三甲医院已开设“阅读困难门诊”，主要用于筛查 ADHD、智力、阅读能力等。有与阅读困难成因的复杂性，医院提供的干预通常为药物治疗。如果您的孩子被诊断为 ADHD 导致的阅读问题，可考虑在医生指导下使用药物。但如果并非如此，请勿轻易服药。
-    </div>
-    <div class="resource-item">
-      <strong>2. 阅读书籍：营造支持氛围</strong>
-      <div class="book-tags">
-        <div class="book-tag">
-          <strong>《我不是笨小孩》</strong><br>
-          一本温暖而励志的绘本，从孩子的视角讲述阅读障碍的挑战，帮助父母理解孩子的内心世界。
-        </div>
-        <div class="book-tag">
-          <strong>《请爱我本来的样子》</strong><br>
-          一本面向家长的实用指南，提供理解和支持阅读障碍儿童的策略，强调接纳与共情。
-        </div>
-        <div class="book-tag">
-          <strong>《走进迷宫：认识阅读障碍》</strong><br>
-          一本深入浅出的科普书，介绍阅读障碍的起因、表现与支持方式，适合家长入门阅读。
-        </div>
+  <h2>我可以怎么做？</h2>
+  <div class="resource-item">
+    <strong>1. 医院门诊：基础筛查</strong><br>
+    目前北京、上海等地多家三甲医院已开设“阅读困难门诊”，主要用于筛查 ADHD、智力、阅读能力等。
+    由于阅读困难成因复杂，医院提供的干预通常为药物治疗。
+    如果孩子被诊断为 ADHD 导致的阅读问题，可考虑在医生指导下使用药物；但如果并非如此，请勿轻易服药。
+  </div>
+  <div class="resource-item">
+    <strong>2. 阅读书籍：营造支持氛围</strong>
+    <div class="book-tags">
+      <div class="book-tag">
+        <strong>《我不是笨小孩》</strong><br>
+        一本温暖而励志的绘本，从孩子视角讲述阅读障碍的挑战，帮助父母理解孩子的内心世界。
+      </div>
+      <div class="book-tag">
+        <strong>《请爱我本来的样子》</strong><br>
+        一本面向家长的实用指南，提供理解和支持阅读障碍儿童的策略，强调接纳与共情。
+      </div>
+      <div class="book-tag">
+        <strong>《走进迷宫：认识阅读障碍》</strong><br>
+        一本深入浅出的科普书，介绍阅读障碍的起因、表现与支持方式，适合家长入门阅读。
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 阅读支持平台
+  </footer>
 
   <script>
-    const checks = document.querySelectorAll('.check');
-    const warning = document.getElementById('warning');
-    checks.forEach(check => {
-      check.addEventListener('change', () => {
-        const count = Array.from(checks).filter(c => c.checked).length;
-        warning.style.display = count >= 3 ? 'block' : 'none';
+    const checklist = document.querySelectorAll('#symptomChecklist input[type="checkbox"]');
+    const warning = document.getElementById('warningMessage');
+    checklist.forEach(item => {
+      item.addEventListener('change', () => {
+        const checked = Array.from(checklist).filter(cb => cb.checked).length;
+        if (checked >= 3) {
+          warning.style.display = 'block';
+        } else {
+          warning.style.display = 'none';
+        }
       });
     });
   </script>
