@@ -109,3 +109,45 @@ body {
   line-height: 1.5;
   color: #5a2e2f;
 }
+
+/* 互动清单样式 */
+.checklist-section {
+  margin-top: 20px;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  color: #5a2e2f;
+}
+
+.checklist li {
+  margin-bottom: 10px;
+}
+
+.warning-message {
+  margin-top: 20px;
+  background-color: #ffe4e6;
+  padding: 12px 15px;
+  border-left: 4px solid #d44a50;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #a33a3f;
+}
+
+/* 资源卡片内嵌内容样式 */
+.resource-list {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #5a2e2f;
+  line-height: 1.6;
+}
+
+.resource-item {
+  background-color: #fff6f7;
+  border-left: 4px solid #f6a6a9;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
