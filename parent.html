@@ -1,98 +1,158 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>家长页面</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家长指南</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(to bottom, #fff7f8, #fefcfc);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    header {
+      background-color: #fde7e9;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #c0474b;
+      margin: 0;
+    }
+
+    section.module {
+      margin: 80px 0;
+      padding: 40px;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(220, 180, 180, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    section.module h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #a33a3f;
+    }
+
+    ul.checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.checklist li {
+      background: #fff7f8;
+      border-left: 4px solid #f6a6a9;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      transition: background 0.3s;
+    }
+
+    ul.checklist li:hover {
+      background: #fde8eb;
+    }
+
+    .resource-item {
+      margin-bottom: 18px;
+      padding: 16px;
+      background: #fff6f7;
+      border-left: 5px solid #f6a6a9;
+      border-radius: 10px;
+    }
+
+    .resource-item strong {
+      font-size: 18px;
+      color: #a33a3f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      section.module {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-<body class="page-parent">
-  <!-- 顶部导航栏 -->
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li class="nav-item active"><a href="parent.html">家长</a></li>
-      <li class="nav-item"><a href="school.html">学校</a></li>
-      <li class="nav-item"><a href="researcher.html">研究者</a></li>
-      <li class="nav-item"><a href="readers.html">阅读困难者</a></li>
-    </ul>
-  </nav>
+<body>
+  <header>
+    <h1>阅读困难儿童家长指南</h1>
+  </header>
 
-  <!-- 欢迎语 -->
-  <section class="hero-section">
-    <p>
-      我们理解，作为父母，当孩子在阅读上遇到困难时，你会感到担心。<br />
-      你不是一个人，我们在这里，陪你一起走。
-    </p>
-  </section>
+  <main class="container">
 
-  <!-- 模块1：我应该担心吗？ -->
-  <section class="info-section">
-    <h2>我应该担心吗？</h2>
-    <p>阅读困难可能影响孩子的学习和自信，但及时关注和帮助能带来积极改变。</p>
-    <ul class="checklist">
-      <li><label><input type="checkbox" class="check-item"> 镜像字或写反（如“6”写成“9”，“问”写成“闻”）</label></li>
-      <li><label><input type="checkbox" class="check-item"> 阅读时跳读或漏读</label></li>
-      <li><label><input type="checkbox" class="check-item"> 只喜欢听故事，不主动阅读</label></li>
-      <li><label><input type="checkbox" class="check-item"> 语文成绩落后同龄人</label></li>
-      <li><label><input type="checkbox" class="check-item"> 读书速度慢，理解困难</label></li>
-      <li><label><input type="checkbox" class="check-item"> 拼写错误多，易混淆相似字</label></li>
-      <li><label><input type="checkbox" class="check-item"> 阅读时挫败感明显</label></li>
-    </ul>
-    <p id="warning-message" class="warning-message" style="display:none; color: red; font-weight: bold;">
-      您的孩子可能存在阅读困难的风险，建议进一步关注或寻求专业支持。
-    </p>
-  </section>
+    <!-- 模块1：我需要担心吗 -->
+    <section class="module">
+      <h2>我需要担心吗？</h2>
+      <p>以下清单帮助您判断孩子是否可能存在阅读困难：</p>
+      <ul class="checklist">
+        <li>写字时会出现镜像字或正反字（如“6”写成“9”，“问”写成“闻”）</li>
+        <li>阅读时经常跳过某些字或漏读</li>
+        <li>只喜欢听故事，不愿意自己阅读</li>
+        <li>语文成绩在班级中偏低，跟不上同学</li>
+        <li>读书时需要很长时间，理解困难</li>
+        <li>拼写错误较多，容易混淆相似字</li>
+        <li>阅读时表现出明显的挫败感或不耐烦</li>
+      </ul>
+    </section>
 
-  <!-- 模块2：我应该联系谁？ -->
-  <section class="info-section">
-    <h2>我应该联系谁？</h2>
-    <p>以下是一些能为你和孩子提供帮助的专业平台或资源：</p>
-    <div class="resource-list">
+    <!-- 模块2：我应该联系谁 -->
+    <section class="module">
+      <h2>我应该联系谁？</h2>
       <div class="resource-item">
-        <strong>【飞米力】</strong><br />
-        分享阅读困难儿童和家庭的真实经历；可申请加入家长微信群，进行交流与支持。
+        <strong>微信公众号：飞米力</strong><br>
+        分享阅读困难儿童和家庭的经历与经验，可加入家长群进行讨论。
       </div>
       <div class="resource-item">
-        <strong>【读写困难有方法】</strong><br />
-        香港教育大学徐堃博士运营，提供专业的英语阅读困难干预服务，尤其适合第二语言学习者。
+        <strong>微信公众号：读写困难有方法</strong><br>
+        由香港教育大学徐堃博士主办，提供专业的英语阅读困难干预服务，也可加入家长群。
       </div>
       <div class="resource-item">
-        <strong>【KnockKnock 芝麻开门】</strong><br />
-        北京大学孟祥芝教授公众号，发布最新阅读研究进展与课题组招募信息。
+        <strong>微信公众号：KnockKnock 芝麻开门</strong><br>
+        北京大学孟祥芝教授团队，发布阅读能力研究与招募信息。
       </div>
       <div class="resource-item">
-        <strong>【虹阅读实验室】</strong><br />
-        北京师范大学李虹教授课题组，持续发布阅读困难相关科普文章及研究招募信息。
+        <strong>微信公众号：虹阅读实验室</strong><br>
+        北京师范大学李虹教授团队，发布阅读困难科普知识与研究招募。
       </div>
-      <p style="margin-top: 20px; color: #b33; font-weight: bold;">
-        ⚠️ 目前中国大陆尚无成熟专业的阅读障碍干预机构，请家长注意辨别信息的可靠性。
+      <p style="margin-top: 16px; font-weight: 600; color: #a33a3f;">
+        ⚠️ 目前大陆并无专业阅读障碍干预机构，请家长注意辨别。
       </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- 模块3：我可以怎么做？ -->
-  <section class="info-section">
-    <h2>我可以怎么做？</h2>
-    <p>
-      父母的理解与支持非常重要。你可以：<br />
-      - 提供一个包容、耐心的家庭阅读环境；<br />
-      - 多与老师、专业人员沟通，了解孩子的具体需要；<br />
-      - 配合专业建议，开展针对性的家庭干预活动；<br />
-      - 鼓励孩子，每一次努力都值得肯定。
-    </p>
-  </section>
+    <!-- 模块3：我应该怎么做（后续可以添加） -->
+    <section class="module">
+      <h2>我应该怎么做？</h2>
+      <p>（此处留空，后续可填写干预建议、家庭支持方法等）</p>
+    </section>
 
-  <!-- JavaScript 功能：打勾提示 -->
-  <script>
-    const checkboxes = document.querySelectorAll('.check-item');
-    const warning = document.getElementById('warning-message');
+  </main>
 
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', () => {
-        const checked = [...checkboxes].filter(item => item.checked).length;
-        warning.style.display = checked >= 3 ? 'block' : 'none';
-      });
-    });
-  </script>
+  <footer>
+    &copy; 2025 阅读困难支持计划 | Design by 你
+  </footer>
 </body>
 </html>
