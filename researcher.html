@@ -1,149 +1,172 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>研究者模块 - 阅读困难</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
+      padding: 0;
+      background-color: #fdf6f7;
+      color: #333;
     }
-
-    header {
-      background-color: #f4a1c1; /* 适合粉色调 */
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-      color: white;
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fde7e9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
-
-    .module-container {
+    .nav-list {
       display: flex;
-      justify-content: space-around;
-      margin: 30px;
-      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      max-width: 900px;
+      margin: 0 auto;
     }
-
+    .nav-item {
+      margin: 0 20px;
+      font-size: 18px;
+    }
+    .nav-item a {
+      text-decoration: none;
+      color: #333;
+      padding: 20px 0;
+      display: inline-block;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .nav-item:hover a {
+      border-bottom: 3px solid #f6a6a9;
+    }
+    .nav-item.active a {
+      font-weight: 700;
+      border-bottom: 3px solid #d44a50;
+      color: #d44a50;
+    }
+    header {
+      padding-top: 80px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    header h1 {
+      font-size: 36px;
+      color: #b94c55;
+    }
+    .module-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
     .module {
-      background-color: #f0e1e1;
-      width: 45%;
-      margin: 10px;
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       overflow: hidden;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
     }
-
     .module img {
       width: 100%;
-      height: auto;
+      height: 180px;
       object-fit: cover;
-      transition: transform 0.3s;
     }
-
-    .module:hover img {
-      transform: scale(1.1);
-    }
-
     .module-content {
-      padding: 15px;
+      padding: 20px;
     }
-
     .module-title {
-      font-size: 1.5em;
+      font-size: 20px;
+      color: #b94c55;
       margin-bottom: 10px;
-      color: #d51a5a;
+      font-weight: 600;
     }
-
     .module-description {
-      font-size: 1.1em;
+      font-size: 16px;
       color: #555;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
-
     .more-button {
-      text-align: center;
-      background-color: #f4a1c1;
+      background-color: #f6a6a9;
       color: white;
-      padding: 10px;
+      padding: 10px 16px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 1em;
-      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
-
     .more-button:hover {
-      background-color: #d51a5a;
+      background-color: #d44a50;
     }
-
-    .back-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #f4a1c1;
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 1em;
-      text-decoration: none;
-    }
-
-    .back-button:hover {
-      background-color: #d51a5a;
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="parent.html">家长</a></li>
+      <li class="nav-item"><a href="school.html">学校</a></li>
+      <li class="nav-item active"><a href="researcher.html">研究者</a></li>
+      <li class="nav-item"><a href="readers.html">阅读困难者</a></li>
+    </ul>
+  </nav>
+
   <header>
-    研究者模块 - 最新文献
+    <h1>研究者模块</h1>
+    <p>最新研究、工具与资源，为阅读困难研究者赋能</p>
   </header>
 
-  <!-- 返回按钮 -->
-  <a href="welcome.html" class="back-button">返回</a>
-
-  <div class="module-container">
-    <!-- 亚类型模块 -->
+  <section class="module-container">
     <div class="module">
       <img src="images/subtypes.jpg" alt="亚类型研究">
       <div class="module-content">
         <div class="module-title">亚类型</div>
-        <div class="module-description">探索阅读障碍的不同亚类型和特征。</div>
-        <a href="subtypes.html" class="more-button">更多</a>
+        <div class="module-description">探索阅读障碍的不同亚类型和认知特征，促进个体化干预。</div>
+        <a href="subtypes.html" class="more-button">了解更多</a>
       </div>
     </div>
 
-    <!-- 干预模块 -->
     <div class="module">
       <img src="images/interventions.jpg" alt="干预研究">
       <div class="module-content">
         <div class="module-title">干预</div>
-        <div class="module-description">研究不同的阅读障碍干预方法。</div>
-        <a href="interventions.html" class="more-button">更多</a>
+        <div class="module-description">汇集干预研究成果，推动实践与理论的结合。</div>
+        <a href="interventions.html" class="more-button">了解更多</a>
       </div>
     </div>
 
-    <!-- 书籍翻译模块 -->
     <div class="module">
       <img src="images/book-translations.jpg" alt="书籍翻译研究">
       <div class="module-content">
         <div class="module-title">书籍翻译</div>
-        <div class="module-description">提供翻译和介绍与阅读障碍相关的书籍。</div>
-        <a href="book-translations.html" class="more-button">更多</a>
+        <div class="module-description">介绍并翻译阅读障碍领域的核心著作，助力本土研究。</div>
+        <a href="book-translations.html" class="more-button">了解更多</a>
       </div>
     </div>
 
-    <!-- 最新相关论文模块 -->
     <div class="module">
       <img src="images/week-theme.jpg" alt="每周主题研究">
       <div class="module-content">
         <div class="module-title">最新相关论文</div>
-        <div class="module-description">每周更新的关于阅读障碍的研究主题。</div>
-        <a href="weekly-theme.html" class="more-button">更多</a>
+        <div class="module-description">每周整理与推荐国际最新阅读障碍研究主题。</div>
+        <a href="weekly-theme.html" class="more-button">了解更多</a>
       </div>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    &copy; 2025 阅读支持平台
+  </footer>
 </body>
 </html>
