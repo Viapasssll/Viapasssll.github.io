@@ -25,6 +25,32 @@
     .nav-list {
       display: flex;
       justify-content: center;
+      list-style: none;<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>家长支持页面</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6f7;
+      color: #333;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fde7e9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .nav-list {
+      display: flex;
+      justify-content: center;
       list-style: none;
       max-width: 900px;
       margin: 0 auto;
@@ -102,18 +128,32 @@
       color: #888;
     }
     .book-tags {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 12px;
-}
-.book-tag {
-  background-color: #fff0f2;
-  border-left: 4px solid #f6a6a9;
-  padding: 12px 16px;
-  border-radius: 10px;
-  line-height: 1.6;
-}
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .book-tag {
+      background-color: #fff0f2;
+      border-left: 4px solid #f6a6a9;
+      padding: 12px 16px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+    .cognifit-button {
+      display: inline-block;
+      background-color: #f6a6a9;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .cognifit-button:hover {
+      background-color: #e56b73;
+    }
   </style>
 </head>
 <body>
@@ -169,31 +209,39 @@
   </section>
 
   <section class="section">
-  <h2>我可以怎么做？</h2>
-  <div class="resource-item">
-    <strong>1. 到专业门诊寻求帮助</strong><br>
-    目前北京、上海等地多家三甲医院已开设“阅读困难门诊”，主要用于筛查 ADHD以及一些基础认知能力。
-    但门诊并没有完善且专业的干预治疗，且由于阅读困难成因复杂，医院提供的干预通常为药物治疗。
-    如果孩子被诊断为 ADHD 导致的阅读问题，可考虑在医生指导下使用药物；但如果并非如此，请勿轻易服药。
-  </div>
-  <div class="resource-item">
-    <strong>2. 阅读书籍：营造支持氛围</strong>
-    <div class="book-tags">
-      <div class="book-tag">
-        <strong>《我不是笨小孩》</strong><br>
-        一本温暖而励志的绘本，从孩子视角讲述阅读障碍的挑战，帮助父母理解孩子的内心世界。
-      </div>
-      <div class="book-tag">
-        <strong>《请爱我本来的样子》</strong><br>
-        一本面向家长的实用指南，提供理解和支持阅读障碍儿童的策略，强调接纳与共情。
-      </div>
-      <div class="book-tag">
-        <strong>《走进迷宫：认识阅读障碍》</strong><br>
-        一本深入浅出的科普书，介绍阅读障碍的起因、表现与支持方式，适合家长入门阅读。
+    <h2>我可以怎么做？</h2>
+    <div class="resource-item">
+      <strong>1. 医院门诊：基础筛查</strong><br>
+      目前北京、上海等地多家三甲医院已开设“阅读困难门诊”，主要用于筛查 ADHD、智力、阅读能力等。
+      由于阅读困难成因复杂，医院提供的干预通常为药物治疗。
+      如果孩子被诊断为 ADHD 导致的阅读问题，可考虑在医生指导下使用药物；但如果并非如此，请勿轻易服药。
+    </div>
+    <div class="resource-item">
+      <strong>2. 阅读书籍：营造支持氛围</strong>
+      <div class="book-tags">
+        <div class="book-tag">
+          <strong>《我不是笨小孩》</strong><br>
+          一本温暖而励志的绘本，从孩子视角讲述阅读障碍的挑战，帮助父母理解孩子的内心世界。
+        </div>
+        <div class="book-tag">
+          <strong>《请爱我本来的样子》</strong><br>
+          一本面向家长的实用指南，提供理解和支持阅读障碍儿童的策略，强调接纳与共情。
+        </div>
+        <div class="book-tag">
+          <strong>《走进迷宫：认识阅读障碍》</strong><br>
+          一本深入浅出的科普书，介绍阅读障碍的起因、表现与支持方式，适合家长入门阅读。
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="resource-item">
+      <strong>3. ♥线上测评与训练：公益认知平台</strong><br>
+      如果您附近没有专业的医疗机构，点击下面网站，进行公益专业在线测评。<br>
+      本测评&训练不收取任何费用，是英国 Shlomo Breznitz 教授为了提高大脑健康提供的公益网站。
+      网站除了提供测评还提供记忆力、专注力、推理、感知等多项针对性认知训练小游戏，您可以在线为孩子制定训练计划并每日完成，逐步提高儿童的基础认知能力！
+      <br>
+      <a class="cognifit-button" href="https://www.cognifit.com/cognifit/site/v2/p/f8e8b9105433a5cac23bc8d33035993b" target="_blank">🧠 CogniFit 测评平台</a>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 阅读支持平台
