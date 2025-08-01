@@ -10,14 +10,16 @@
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fdf6f7;
-      color: #333;
-    }
+      background-color: #FFF0F5; /* 主背景色：柔和淡粉 */
+      color: #444444;            /* 正文字体颜色：深灰 */
+      font-family: "Helvetica Neue", sans-serif;
+}
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #fde7e9;
+      background-color: #FFF8DC; /* 导航栏背景色：奶油黄 */
+      color: #6BA292; 
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       z-index: 1000;
     }
@@ -41,12 +43,12 @@
       transition: border-color 0.3s;
     }
     .nav-item:hover a {
-      border-bottom: 3px solid #f6a6a9;
+      border-bottom: 3px solid #808080;
     }
     .nav-item.active a {
       font-weight: 700;
-      border-bottom: 3px solid #d44a50;
-      color: #d44a50;
+      border-bottom: 3px solid #333;
+      color: #333;
     }
     header {
       padding-top: 80px;
@@ -55,7 +57,7 @@
     }
     header h1 {
       font-size: 36px;
-      color: #b94c55;
+      color: #A493C6;
     }
     section {
       max-width: 800px;
@@ -67,7 +69,7 @@
       margin-bottom: 40px;
     }
     section h2 {
-      color: #b94c55;
+      color: #A493C6;
       font-size: 28px;
       margin-bottom: 20px;
     }
@@ -81,15 +83,15 @@
     }
     .warning {
       background-color: #ffe9ea;
-      color: #a33a3f;
+      color: #FF6B6B;
       padding: 15px;
       border-radius: 8px;
       margin-top: 20px;
       font-weight: bold;
     }
     .resource-item {
-      background: #fff7f7;
-      border-left: 4px solid #f6a6a9;
+      background: #fff0f5;
+      border-left: 4px solid #ffe6f0;
       padding: 15px;
       margin-bottom: 16px;
       border-radius: 8px;
@@ -125,7 +127,7 @@
       transition: background-color 0.3s;
     }
     .cognifit-button:hover {
-      background-color: #e56b73;
+      background-color: #FFF8DC;
     }
   </style>
 </head>
@@ -236,3 +238,4 @@
   </script>
 </body>
 </html>
+
