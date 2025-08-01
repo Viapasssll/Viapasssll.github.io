@@ -1,0 +1,55 @@
+/* theme.css - 粉色系温暖主题 */
+
+/* 全局背景与字体色 */
+body {
+  background: #ffe4e1; /* 淡粉背景 */
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* 主要容器风格 */
+.container,
+section,
+.card {
+  background: #ffb6c1; /* 深粉背景块 */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 标题风格 */
+h1, h2, h3, h4 {
+  color: #ffffff; /* 白色标题 */
+}
+
+/* 按钮统一风格 */
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #ff69b4; /* 热粉色字体 */
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff69b4; /* 热粉色背景 */
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 链接 hover 风格 */
+a:hover {
+  color: #ff69b4;
+}
+
+/* 导航栏示例色调（如果有的话） */
+.navbar {
+  background-color: #ffdde2;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
